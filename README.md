@@ -1,1 +1,1 @@
-# Rock Paper Scissors Game
+# Vanilla js Rock Paper Scissors Game Complete
