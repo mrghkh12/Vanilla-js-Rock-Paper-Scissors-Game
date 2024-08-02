@@ -6,3 +6,41 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: #f6f7fb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    padding: 2rem 7rem;
+    border-radius: 14px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container .choice-image{
+    display: flex;
+    column-gap: 7rem;
+}
+
+.container .choice-image img{
+    width: 100px;
+}
+.container .choice-image .user-choice{
+    transform: rotate(90deg);
+}
+.container .choice-image .bot-choice{
+    transform: rotate(-90deg) rotateY(180deg);
+}
+
+.container .result{
+    text-align: center;
+    font-size: 2rem;
+    color: #7d2ae8;
+    margin-top: 1.5rem;
+}
