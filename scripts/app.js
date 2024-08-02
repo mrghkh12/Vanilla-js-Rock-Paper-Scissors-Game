@@ -18,14 +18,15 @@ optionImage.forEach(image => {
         e.target.classList.add('active')
 
         let imgSelectedSrc = e.target.querySelector('img').src
-        userSelect(imgSelectedSrc)
-        botSelect()
+        checkChoic(userSelect(imgSelectedSrc) , botSelect())
     })
 })
 
 
 function userSelect(imgSrc){
     userChoice.src = imgSrc
+
+    return cutImgName(userChoice.src)
 }
 
 function botSelect(){
@@ -34,4 +35,19 @@ function botSelect(){
     let randomSelectIndex = Math.floor(Math.random() * 3)
 
     botChoice.src = imgSrcList[randomSelectIndex]
+
+    return cutImgName(botChoice.src)
+}
+
+function checkChoic(user , bot){
+    console.log(user , bot);
+    
+
+}
+
+
+function cutImgName(imgSrc){
+    let imgSrcArr = imgSrc.split('/')
+    let imgName = imgSrcArr[imgSrcArr.length - 1].split('.')
+    return imgName[0]
 }
