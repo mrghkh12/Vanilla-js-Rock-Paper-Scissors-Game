@@ -19,10 +19,19 @@ optionImage.forEach(image => {
 
         let imgSelectedSrc = e.target.querySelector('img').src
         userSelect(imgSelectedSrc)
+        botSelect()
     })
 })
 
 
 function userSelect(imgSrc){
     userChoice.src = imgSrc
+}
+
+function botSelect(){
+    let imgSrcList = ['./image/rock.png', './image/paper.png' , './image/scissors.png']
+
+    let randomSelectIndex = Math.floor(Math.random() * 3)
+
+    botChoice.src = imgSrcList[randomSelectIndex]
 }
