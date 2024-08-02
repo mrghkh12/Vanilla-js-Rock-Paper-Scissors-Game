@@ -58,6 +58,11 @@ body{
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+.container .option-image .image:hover{
+    opacity: 1;
 }
 
 .container .option-image .image img{
