@@ -64,6 +64,9 @@ body{
 .container .option-image .image:hover{
     opacity: 1;
 }
+.container .option-image .image.active{
+    opacity: 1;
+}
 
 .container .option-image .image img{
     width: 50px;
