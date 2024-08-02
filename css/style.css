@@ -78,6 +78,9 @@ body{
     margin-top: 1rem;
 }
 
+.container.checking .option-image{
+    pointer-events: none;
+}
 
 .container.checking .user-choice{
     transform-origin: left;
@@ -90,10 +93,10 @@ body{
 }
 .container.checking .bot-choice{
     transform-origin: right;
-    animation: userShake 0.7s ease infinite;
+    animation: botShake 0.7s ease infinite;
 }
 @keyframes botShake {
     50%{
-        transform: rotate(10deg);
+        transform: rotate(-10deg);
     }
 }

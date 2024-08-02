@@ -19,6 +19,7 @@ optionImage.forEach(image => {
 
         let imgSelectedSrc = e.target.querySelector('img').src
 
+        waitForChecking()
         gameContainer.classList.add('checking')
         setTimeout(() => {
             checkChoic(userSelect(imgSelectedSrc) , botSelect())
@@ -64,4 +65,10 @@ function cutImgName(imgSrc){
     let imgSrcArr = imgSrc.split('/')
     let imgName = imgSrcArr[imgSrcArr.length - 1].split('.')
     return imgName[0]
+}
+
+function waitForChecking(){
+    userChoice.src = './image/rock.png'
+    botChoice.src = './image/rock.png'
+    resultText.textContent = 'Wait...'
 }
