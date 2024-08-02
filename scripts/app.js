@@ -18,7 +18,14 @@ optionImage.forEach(image => {
         e.target.classList.add('active')
 
         let imgSelectedSrc = e.target.querySelector('img').src
-        checkChoic(userSelect(imgSelectedSrc) , botSelect())
+
+        waitForChecking()
+        gameContainer.classList.add('checking')
+        setTimeout(() => {
+            checkChoic(userSelect(imgSelectedSrc) , botSelect())
+            gameContainer.classList.remove('checking')
+        }, 2000)
+        
     })
 })
 
@@ -46,7 +53,7 @@ function checkChoic(user , bot){
     else if((user == 'rock' && bot == 'scissors') ||
      (user == 'paper' && bot == 'rock')||
       (user == 'scissors' && bot == 'paper')){
-        
+
         resultText.textContent = 'User Won!'
     }else{
         resultText.textContent = 'Bot Won!'
@@ -58,4 +65,10 @@ function cutImgName(imgSrc){
     let imgSrcArr = imgSrc.split('/')
     let imgName = imgSrcArr[imgSrcArr.length - 1].split('.')
     return imgName[0]
+}
+
+function waitForChecking(){
+    userChoice.src = './image/rock.png'
+    botChoice.src = './image/rock.png'
+    resultText.textContent = 'Wait...'
 }
