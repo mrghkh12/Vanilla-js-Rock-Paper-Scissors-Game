@@ -33,10 +33,10 @@ body{
 .container .choice-image img{
     width: 100px;
 }
-.container .choice-image .user-choice{
+.container .choice-image .user-choice img{
     transform: rotate(90deg);
 }
-.container .choice-image .bot-choice{
+.container .choice-image .bot-choice img{
     transform: rotate(-90deg) rotateY(180deg);
 }
 
@@ -76,4 +76,24 @@ body{
     color: #7d2ae8;
     font-size: 1.23rem;
     margin-top: 1rem;
+}
+
+
+.container.checking .user-choice{
+    transform-origin: left;
+    animation: userShake 0.7s ease infinite;
+}
+@keyframes userShake {
+    50%{
+        transform: rotate(10deg);
+    }
+}
+.container.checking .bot-choice{
+    transform-origin: right;
+    animation: userShake 0.7s ease infinite;
+}
+@keyframes botShake {
+    50%{
+        transform: rotate(10deg);
+    }
 }

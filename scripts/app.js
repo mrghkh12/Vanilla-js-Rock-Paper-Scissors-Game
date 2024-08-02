@@ -18,7 +18,13 @@ optionImage.forEach(image => {
         e.target.classList.add('active')
 
         let imgSelectedSrc = e.target.querySelector('img').src
-        checkChoic(userSelect(imgSelectedSrc) , botSelect())
+
+        gameContainer.classList.add('checking')
+        setTimeout(() => {
+            checkChoic(userSelect(imgSelectedSrc) , botSelect())
+            gameContainer.classList.remove('checking')
+        }, 2000)
+        
     })
 })
 
@@ -46,7 +52,7 @@ function checkChoic(user , bot){
     else if((user == 'rock' && bot == 'scissors') ||
      (user == 'paper' && bot == 'rock')||
       (user == 'scissors' && bot == 'paper')){
-        
+
         resultText.textContent = 'User Won!'
     }else{
         resultText.textContent = 'Bot Won!'
