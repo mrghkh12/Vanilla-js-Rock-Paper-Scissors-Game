@@ -21,11 +21,13 @@ body{
     border-radius: 14px;
     background-color: #fff;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    user-select: none;
 }
 
 .container .choice-image{
     display: flex;
     column-gap: 7rem;
+    pointer-events: none;
 }
 
 .container .choice-image img{
@@ -43,4 +45,32 @@ body{
     font-size: 2rem;
     color: #7d2ae8;
     margin-top: 1.5rem;
+}
+
+.container .option-image{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+}
+.container .option-image .image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+.container .option-image .image:hover{
+    opacity: 1;
+}
+
+.container .option-image .image img{
+    width: 50px;
+    pointer-events: none;
+}
+.container .option-image .image p{
+    color: #7d2ae8;
+    font-size: 1.23rem;
+    margin-top: 1rem;
 }
