@@ -100,3 +100,26 @@ body{
         transform: rotate(-10deg);
     }
 }
+
+@media screen and (max-width: 550px) {
+    .container{
+        width: 90%;
+        padding: 2rem 3rem;
+    }
+    .container .choice-image img{
+        width: 100%;
+    }
+    .container .choice-image{
+        column-gap: 3rem;
+    }
+    .container .option-image .image{
+        padding: 0 10px;
+    }
+    .container .option-image .image img{
+        width: 30px;
+    }
+    .container .option-image .image p{
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+}
