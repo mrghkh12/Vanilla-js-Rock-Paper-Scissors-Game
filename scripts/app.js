@@ -40,9 +40,17 @@ function botSelect(){
 }
 
 function checkChoic(user , bot){
-    console.log(user , bot);
-    
-
+    if(user === bot){
+        resultText.textContent = 'Match Draw'
+    }
+    else if((user == 'rock' && bot == 'scissors') ||
+     (user == 'paper' && bot == 'rock')||
+      (user == 'scissors' && bot == 'paper')){
+        
+        resultText.textContent = 'User Won!'
+    }else{
+        resultText.textContent = 'Bot Won!'
+    }
 }
 
 
