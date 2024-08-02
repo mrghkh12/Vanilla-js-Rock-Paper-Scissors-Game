@@ -37,3 +37,10 @@ body{
 .container .choice-image .bot-choice{
     transform: rotate(-90deg) rotateY(180deg);
 }
+
+.container .result{
+    text-align: center;
+    font-size: 2rem;
+    color: #7d2ae8;
+    margin-top: 1.5rem;
+}
