@@ -22,3 +22,18 @@ body{
     background-color: #fff;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
+
+.container .choice-image{
+    display: flex;
+    column-gap: 7rem;
+}
+
+.container .choice-image img{
+    width: 100px;
+}
+.container .choice-image .user-choice{
+    transform: rotate(90deg);
+}
+.container .choice-image .bot-choice{
+    transform: rotate(-90deg) rotateY(180deg);
+}
